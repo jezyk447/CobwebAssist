@@ -1,26 +1,20 @@
 {
   "schemaVersion": 1,
   "id": "cobwebassist",
-  "version": "${version}",
-
+  "version": "1.0.0",
   "name": "Cobweb Assist",
-  "description": "Cobweb Assist",
-  "authors": [],
-  "contact": {},
-
-  "license": "unlicense",
-  "icon": "assets/cobwebassist/icon.png",
-
+  "description": "Assists with fast and precise cobweb and water placing",
+  "authors": ["jezyk_2137"],
+  "license": "MIT",
   "environment": "*",
   "entrypoints": {
-    "client": ["pl.jezyk_2137.cobwebassist.client.CobwebAssistClient"],
-    "main": ["pl.jezyk_2137.cobwebassist.CobwebAssist"]
+    "client": [
+      "pl.jezyk_2137.cobwebassist.CobwebAssist"
+    ]
   },
-
-
   "depends": {
-    "fabricloader": ">=${loader_version}",
+    "fabricloader": ">=0.14.21",
     "fabric": "*",
-    "minecraft": "${minecraft_version}"
+    "minecraft": "1.20.1"
   }
 }

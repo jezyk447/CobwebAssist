@@ -1,0 +1,8 @@
+{
+  "mod.cobwebassist.name": "CobWeb Assist",
+  "mod.cobwebassist.description": "Assists with fast and precise cobweb and water placing for PvP and traps.",
+  "key.cobwebassist.toggle": "Toggle CobWeb Assist",
+  "key.cobwebassist.trigger": "Place Cobweb Combo",
+  "message.cobwebassist.enabled": "CobWeb Assist ON",
+  "message.cobwebassist.disabled": "CobWeb Assist OFF"
+}
