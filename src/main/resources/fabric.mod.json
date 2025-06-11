@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "cobwebassist",
+  "version": "${version}",
+
+  "name": "Cobweb Assist",
+  "description": "Cobweb Assist",
+  "authors": [],
+  "contact": {},
+
+  "license": "unlicense",
+  "icon": "assets/cobwebassist/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "client": ["pl.jezyk_2137.cobwebassist.client.CobwebAssistClient"],
+    "main": ["pl.jezyk_2137.cobwebassist.CobwebAssist"]
+  },
+
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
