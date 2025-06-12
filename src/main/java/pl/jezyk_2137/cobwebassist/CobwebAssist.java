@@ -45,10 +45,20 @@ public class CobwebAssist implements ClientModInitializer {
                     startSlot = client.player.getInventory().selectedSlot;
                     waterSlot = Util.findSlotWithWaterOrLava(client);
                     cobwebSlot = Util.findSlotWithCobweb(client);
-                    if (waterSlot != -1 && cobwebSlot != -1) {
-                        sequenceRunning = true;
-                        runSequence(client);
-                        sequenceRunning = false;
+                    if (waterSlot != -1 && cobwebSlot != -1
+                            && client.crosshairTarget != null
+                            && client.crosshairTarget.getType() == HitResult.Type.BLOCK) {
+
+                        BlockHitResult blockHit = (BlockHitResult) client.crosshairTarget;
+                        var blockState = client.world.getBlockState(blockHit.getBlockPos());
+                        var block = blockState.getBlock();
+                        if (!(block instanceof net.minecraft.block.LeverBlock
+                                || block instanceof net.minecraft.block.ButtonBlock)) {
+
+                            sequenceRunning = true;
+                            runSequence(client);
+                            sequenceRunning = false;
+                        }
                     }
                 }
             }
